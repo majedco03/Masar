@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="424" height="392" viewBox="0 0 424 392" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="inner" x1="35" y1="215" x2="254" y2="-17" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.94"/>
+      <stop offset=".25" stop-color="#DCD0FF"/>
+      <stop offset=".51" stop-color="#FFFFFF"/>
+      <stop offset=".77" stop-color="#F0E7FF"/>
+      <stop offset="1" stop-color="#D3B8FF" stop-opacity="0.78"/>
+    </linearGradient>
+    <linearGradient id="outer" x1="-10" y1="360" x2="375" y2="-5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF" stop-opacity="0.9"/>
+      <stop offset=".23" stop-color="#F9F4FF"/>
+      <stop offset=".48" stop-color="#C9AFF9"/>
+      <stop offset=".72" stop-color="#FFFEFF"/>
+      <stop offset="1" stop-color="#E4D4FF" stop-opacity=".77"/>
+    </linearGradient>
+    <filter id="halo" x="-35%" y="-35%" width="170%" height="170%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="tight" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+  <g transform="translate(424 392) rotate(180)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Low-opacity atmospheric glow; transparency is preserved. -->
+    <g filter="url(#halo)" opacity=".56">
+      <path d="M -7 412 C -7 216 165 24 402 -12" stroke="#D9BAFF" stroke-width="24"/>
+      <path d="M -22 219 C 97 224 225 143 218 -25" stroke="#EFE4FF" stroke-width="20"/>
+    </g>
+    <!-- Outer sweep: silver-lilac with soft beveled edges. -->
+    <path d="M -7 412 C -7 216 165 24 402 -12" stroke="#BFA0EE" stroke-opacity=".44" stroke-width="17"/>
+    <path d="M -7 412 C -7 216 165 24 402 -12" stroke="url(#outer)" stroke-width="11"/>
+    <path d="M -7 412 C -7 216 165 24 402 -12" stroke="#FFFFFF" stroke-opacity=".3" stroke-width="6" filter="url(#tight)"/>
+    <path d="M -7 412 C -7 216 165 24 402 -12" stroke="#FFFFFF" stroke-opacity=".84" stroke-width="1.75"/>
+    <!-- Inner sweep: slightly slimmer, visibly passing over the larger arc. -->
+    <path d="M -22 219 C 97 224 225 143 218 -25" stroke="#B9A0E5" stroke-opacity=".42" stroke-width="13.5"/>
+    <path d="M -22 219 C 97 224 225 143 218 -25" stroke="url(#inner)" stroke-width="8.5"/>
+    <path d="M -22 219 C 97 224 225 143 218 -25" stroke="#FFFFFF" stroke-opacity=".33" stroke-width="4" filter="url(#tight)"/>
+    <path d="M -22 219 C 97 224 225 143 218 -25" stroke="#FFFFFF" stroke-opacity=".88" stroke-width="1.6"/>
+  </g>
+</svg>

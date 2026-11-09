@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>مسَار</title>
+</head>
+<body>
+  <div class="login_container">
+    <div id="crossing_gradients"></div>
+    <div id="crossing_gradients-reverse"></div>
+    <div id="logo_login">
+        <img src="assets/masar_logo_transparent.svg" alt="masar logo" id="logo_login_img">
+    </div>
+
+    <div class="login card">
+        <h2 class="login_card">
+            مرحبًا بك في مسَار
+        </h2>
+        <form class="login_card" id="login_form" method="POST">
+            <label for="user_name" class="field_label">إسم المستخدم</label><br>
+            <input name="user_name" type="text" placeholder="ادخل اسم المستخدم" class="field username"><br><br>
+            <label for="password" class="field_label">كلمة المرور</label><br>
+            <input type="password" name="password" placeholder="كلمة المرور" class="field password"><br><br>
+            <input type="submit" value="تسجيل الدخول" class="btn" id="login_btn">
+            <input type="button" value="إنشاء حساب جديد" class="btn" id="register_btn">
+        </form>
+    </div>
+    </div>
+    
+    <script src="js/login.js"></script>
+</body>
+</html>
