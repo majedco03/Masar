@@ -17,9 +17,9 @@ html, body {
     height: 100%;
     /* I will use the Saudi font (downloaded from وزارة الثقافة */
     font-family: "Saudi", sans-serif;
-    background: linear-gradient(160deg, rgb(36, 0, 66), rgb(0, 0, 0), rgb(36, 0, 66));
+    background: #F6F7FB;
     text-align: right;
-    color: white;
+    color: black;
 }
 
 .login_container {
@@ -32,7 +32,6 @@ html, body {
     /* make the div cover the entire viewport */
     height: 100%;
     width: 100%;
-    overflow: hidden;
     box-sizing: border-box;
 }
 /* make the image in the second row and second column, and style it */
@@ -52,19 +51,10 @@ html, body {
 }
 
 .card {
-background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.2) 0%,
-        rgba(255, 255, 255, 0.05) 100%
-    );
-
-    border: 1px solid rgba(255, 255, 255, 0.35);
-
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.5),
-        0 0 25px rgba(170, 120, 255, 0.45);
-
-    backdrop-filter: blur(16px) saturate(140%);
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    box-shadow: 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
 }
 .login {
     grid-row: 2;
@@ -75,47 +65,16 @@ background: linear-gradient(
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: right;
-    text-align: right;
     border-radius: 1.5rem;
-            /* minimum width and height, because when the screen is smaller sometimes the card becomes shorter and the buttons and fields become out of ity */
+            /* minimum width and height, because when the screen is smaller sometimes the card becomes shorter and the buttons and fields become out of it */
     min-width: 20rem;
-    min-height: 26rem;
-
-    
-
-}
-/* positiong the svg decorations */
-#crossing_gradients {
-    grid-row: span 2;
-    grid-column: 1;
-    /* make the image cover the entire cell */
-    width: 100%;
-    height: 100%;
-    background-image: url(assets/corner-top-left.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top left;
-}
-
-#crossing_gradients-reverse {
-    grid-row: 2 / 4;
-    grid-column: 3;
-    width: 100%;
-    height: 100%;
-    background-image:
-    /* will add the decoration image here, when i put it as html element it wasn't aligned properly */
-    url(assets/corner-bottom-right.svg);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height: 28rem;
 }
 
 .login h2 {
     font-size: 1.5rem;
-    color: white;
+    color: black;
     margin-bottom: 1rem;
-    text-align: right;
     font-weight: 700;
     font-size: 2rem;
 }
@@ -125,30 +84,30 @@ background: linear-gradient(
 .field {
     width: 100%;
     padding: 0.5rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    background: #F6F7FB;
+    color: black;
     font-size: 1rem;
-    text-align: right;
     margin-top: 0.5rem;
     font-family: "Saudi", sans-serif;
+
 }
 
 /* the labels */
 .field_label {
-    color: white;
+    color: black;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    text-align: right;
 }
 
 /* buttons */
 .btn {
     padding: 0.5rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(0, 0, 0, 0.35);
     border-radius: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: #0B66D6;
     color: white;
     font-size: 1rem;
     text-align: right;
@@ -158,7 +117,21 @@ background: linear-gradient(
 }
 
 .btn:active {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#login_btn {
+    width: 100%;
+    text-align: center;
+}
+
+#register_btn {
+    width: 100%;
+    text-align: center;
+    color: black;
+    border: 0;
+    background: transparent;
+    text-decoration: underline;
 }
 
 
@@ -175,9 +148,6 @@ background: linear-gradient(
 #plan_container {
     display: flex;
     flex-direction: row;
-    align-items: right;
-    justify-content: right;
-
     /* horizontal scroll if needed */
     overflow-x: auto;
 }
@@ -190,26 +160,31 @@ background: linear-gradient(
     border-radius: 1rem;
 } 
 
+.app_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .app_logo img {
     width: 6rem;
     height: auto;
     display: inline;
     margin: 0rem 2rem;
-    transform: translateY(+25%);
 }
 
 .nav_links {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: right;
-    justify-content: right;
     margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .nav_links li, .nav_links a {
     list-style: none;
     margin-left: 1rem;
-    color: white;
+    color: black;
     font-size: 1.2rem;
     font-family: "Saudi", sans-serif;
     text-decoration: none;
@@ -217,15 +192,30 @@ background: linear-gradient(
 
 #header_container {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: right;
     margin-bottom: 1rem;
     grid-column: 1;
     grid-row: 1;
 }
 
+.header{
+    border-radius: 0;
+}
 
+#path h3 {
+    width: 100%;
+}
+
+#path p{
+    font-size: 1rem;
+    width: 100%;
+}
+
+#path ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0;
+}
 /* using media i will make it suitable for mobile phones */
 @media (max-width: 767px) {
     .login {
